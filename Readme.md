@@ -1,32 +1,46 @@
-Real-Time Chat Application
+<readme>
+  <title>Real-Time Chat Application</title>
 
-Minimal real-time chat system using Node.js, Express, and Socket.IO on the backend, with plain HTML, CSS, and JavaScript on the frontend. Focuses on fundamentals: event-based messaging over WebSockets without frontend frameworks.
+  <section heading="Description">
+    Minimal real-time chat system using Node.js, Express, and Socket.IO.
+    Frontend uses plain HTML, CSS, and JavaScript. Demonstrates WebSocket-based
+    bidirectional communication without any frontend frameworks.
+  </section>
 
-Features
+  <section heading="Features">
+    <item>Real-time message broadcasting</item>
+    <item>Automatic reconnection (Socket.IO)</item>
+    <item>Simple username prompt</item>
+    <item>Lightweight UI, no build tools</item>
+  </section>
 
-Real-time message broadcasting
+  <section heading="Tech Stack">
+    <backend>Node.js</backend>
+    <backend>Express</backend>
+    <backend>Socket.IO</backend>
+    <frontend>HTML</frontend>
+    <frontend>CSS</frontend>
+    <frontend>JavaScript</frontend>
+  </section>
 
-Automatic reconnection (Socket.IO built-in)
+  <section heading="Installation">
+    <step>git clone &lt;repository-url&gt;</step>
+    <step>cd chatroom</step>
+    <step>npm install</step>
+    <step>node server.js</step>
+    <note>Open http://localhost:5000 in a browser.</note>
+  </section>
 
-Simple username prompt
+  <section heading="Client Script Include">
+    <code>&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;</code>
+    <code>&lt;script src="client.js"&gt;&lt;/script&gt;</code>
+  </section>
 
-Lightweight UI
-
-Tech Stack
-
-Node.js
-
-Express
-
-Socket.IO
-
-HTML, CSS, JavaScript
-
-Installation
-git clone <repository-url>
-cd chatroom
-npm install
-node server.js
-
-
-Visit http://localhost:5001
+  <section heading="Basic Client Logic">
+    <code>
+      const socket = io();
+      socket.emit("message", text);
+      socket.on("message", handler);
+    </code>
+  </section>
+</readme>
