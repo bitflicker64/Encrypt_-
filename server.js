@@ -10,18 +10,14 @@ app.use(express.static(path.join(__dirname+"/public")));
 
 io.on("connection", function(socket){
     socket.on("newuser",function(username){
-        // just a joke 
-        socket.broadcast.emit("update",username +" joined the terrorist's (AL-Qa'ida(AQ))");
+        socket.broadcast.emit("update",username +" joined the Newtons chatroom");
     });
     socket.on("exituser",function(username){
-        // just a joke 
-        socket.broadcast.emit("update",username +" Left the terrorist's (AL-Qa'ida(AQ))");
+        socket.broadcast.emit("update",username +" Left the Newtons Chatroom");
     });
     socket.on("chat",function(message){
-        // just a joke 
         socket.broadcast.emit("chat",message);
     });
 });
 
 server.listen(5001);
-
